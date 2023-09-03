@@ -30,7 +30,7 @@ model Server{
   id String @id @default(uuid())
   name String 
   imageUrl String @db.Text
-  invitedCode String @db.Text
+  invitedCode String @unique
   members Member[]
   channels Channel[]
 
@@ -78,6 +78,7 @@ enum ChannelType{
 
 model Channel{
   id String @id @default(uuid())
+  name String
   type ChannelType @default(TEXT)
 
   profileId String
