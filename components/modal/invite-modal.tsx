@@ -16,9 +16,10 @@ import { Button } from "../ui/button";
 import { Check, Copy, RefreshCw } from "lucide-react";
 import { UseOrigin } from "@/hooks/use-origin";
 import { useState } from "react";
+import axios from "axios";
 
 export const InviteModal = () => {
-  const { isOpen, onClose, type, data } = useModal();
+  const { isOpen, onClose, type, data, onOpen } = useModal();
   const origin = UseOrigin();
   const [copy, setCopy] = useState<boolean>();
   const [loading, setLoading] = useState<boolean>();
@@ -34,6 +35,20 @@ export const InviteModal = () => {
     setTimeout(() => {
       setCopy(false);
     }, 1000);
+  };
+
+  const onGenerate = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.patch(
+        `/api/servers/${server?.id}/invite-code`
+      );
+      onOpen("invite", { server: response?.data });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -55,7 +70,7 @@ export const InviteModal = () => {
               value={inviteCode}
             />
 
-            <Button onClick={onCopy} size="icon">
+            <Button disabled={loading} onClick={onCopy} size="icon">
               {copy ? (
                 <Check className="w-4 h-4" />
               ) : (
@@ -64,9 +79,11 @@ export const InviteModal = () => {
             </Button>
           </div>
           <Button
+            disabled={loading}
             variant="link"
             size="sm"
             className="text-xs text-zinc-500 mt-4"
+            onClick={onGenerate}
           >
             Generate a new link
             <RefreshCw className="w-4 h-4 ml-2" />
