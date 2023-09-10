@@ -9,6 +9,7 @@ import ChannelModal from "@/components/modal/create-channel-modal";
 import { LeaveServerModal } from "@/components/modal/leave-server";
 import { DeleteServerModal } from "@/components/modal/delete-server-modal";
 import { DeleteChannelModal } from "@/components/modal/delete-channel";
+import EditChannelModal from "@/components/modal/edit-channel";
 
 export const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -30,6 +31,7 @@ export const ModalProvider = () => {
       <LeaveServerModal />
       <DeleteServerModal />
       <DeleteChannelModal />
+      <EditChannelModal />
     </>
   );
 };
