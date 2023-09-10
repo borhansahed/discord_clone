@@ -45,7 +45,7 @@ const formSchema = z.object({
   type: z.nativeEnum(ChannelType),
 });
 const ChannelModal = () => {
-  const { onOpen, onClose, isOpen, type, data } = useModal();
+  const { onClose, isOpen, type, data } = useModal();
   const router = useRouter();
   const params = useParams();
   const { channelType } = data;
