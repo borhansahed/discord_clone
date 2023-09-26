@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Discord App - Tech Stack Excellence
+
+Welcome to the Discord app, where excellence meets technology. Our app is built on a rock-solid foundation, leveraging a robust tech stack to ensure optimal performance, security, and an unrivaled user experience.
+
+## Tech Stack
+
+- **TypeScript**: Ensures type safety and improved developer productivity.
+- **Next.js**: A powerful React framework for building fast and scalable web applications.
+- **Shadcn**: (Please provide more information about Shadcn as it is not a widely known technology)
+- **Tailwind CSS**: A utility-first CSS framework for quickly building custom designs.
+- **Prisma**: A modern database toolkit for Node.js and TypeScript.
+- **MySQL**: A popular open-source relational database management system.
+
+## Features
+
+### Seamless Login
+Your journey begins with a seamless and secure login process, putting your privacy and data protection front and center.
+
+### Create and Customize Your Server
+With our app, server creation becomes an art. Tailor your server to your exact specifications, giving you complete control and creative freedom.
+
+### Effortless Invitations
+Inviting friends is a breeze! Generate invitation links with ease and bring your friends into your digital realm in seconds.
+
+### Real-Time Chat
+Our app keeps communication snappy and straightforward. Engage in real-time text conversations that are fast, reliable, and user-friendly.
+
+### Audio and Video Calls
+Experience Discord in a whole new light with our built-in audio and video call feature. Stay connected with your friends like never before.
+
+### Private Messaging
+Need a one-on-one chat? Our personal messaging feature lets you communicate directly with another server member without leaving the server. It's seamless and secure.
+
+### Admin Control
+As the server creator and admin, you wield the ultimate power. Remove unwanted members and maintain a safe, enjoyable environment. If the time comes, you can even delete the server with ease.
 
 ## Getting Started
 
-First, run the development server:
+To experience the Discord app in action, visit our live demo [here](https://lnkd.in/gNew8DmK).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+For access to the source code and to start building with our tech stack, check out our code repository [here](https://lnkd.in/gF86iVY7).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+We welcome contributions from the community to make our app even better. Please refer to our [contribution guidelines](CONTRIBUTING.md) for more information.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
