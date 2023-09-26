@@ -36,14 +36,10 @@ As the server creator and admin, you wield the ultimate power. Remove unwanted m
 
 ## Getting Started
 
-To experience the Discord app in action, visit our live demo [here](https://lnkd.in/gNew8DmK).
+To experience the Discord app in action, visit our live demo [here](https://discord-mdsahed1099-gmailcom.vercel.app/).
 
-For access to the source code and to start building with our tech stack, check out our code repository [here](https://lnkd.in/gF86iVY7).
 
 ## Contributing
 
 We welcome contributions from the community to make our app even better. Please refer to our [contribution guidelines](CONTRIBUTING.md) for more information.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
