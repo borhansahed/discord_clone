@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -36,7 +36,7 @@ model Server{
 
 
   profileId String
-  porfile Profile @relation(fields: [profileId], references:[id], onDelete: Cascade)
+  porfile Profile @relation(fields: [profileId], references:[id])
   
 
   createdAt DateTime @default(now())
@@ -61,10 +61,10 @@ model Member{
  conversationsReceived Conversation[] @relation("MemberTwo")
 
   profileId String
-  profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  profile Profile @relation(fields: [profileId], references: [id])
 
   serverId String
-  server Server @relation(fields: [serverId], references: [id], onDelete: Cascade)
+  server Server @relation(fields: [serverId], references: [id])
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -89,10 +89,10 @@ model Channel{
 
   message Message[]
   profileId String
-  profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  profile Profile @relation(fields: [profileId], references: [id])
 
   serverId String
-  server Server @relation(fields: [serverId], references: [id], onDelete: Cascade)
+  server Server @relation(fields: [serverId], references: [id])
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -107,10 +107,10 @@ model Message{
    fileUrl String? @db.Text
 
    memberId String
-   member Member @relation(fields: [memberId], references: [id], onDelete: Cascade)
+   member Member @relation(fields: [memberId], references: [id])
 
    channelId String
-   channel Channel @relation(fields: [channelId], references: [id], onDelete: Cascade)
+   channel Channel @relation(fields: [channelId], references: [id])
 
    deleted Boolean @default(false)
 
@@ -128,10 +128,10 @@ model Conversation{
 
  directMessages DirectMassage[]
   memberOneId String
-  memberOne Member @relation("MemberOne",fields: [memberOneId], references: [id], onDelete: Cascade)
+  memberOne Member @relation("MemberOne",fields: [memberOneId], references: [id])
 
   memberTwoId String
-  memberTwo Member @relation("MemberTwo",fields: [memberTwoId], references: [id], onDelete: Cascade)
+  memberTwo Member @relation("MemberTwo",fields: [memberTwoId], references: [id])
 
    @@index([memberOneId])
    @@index([memberTwoId])
@@ -148,10 +148,10 @@ model DirectMassage{
   fileUrl String @db.Text
 
   memberId String
-  member Member @relation(fields: [memberId], references: [id], onDelete: Cascade)  
+  member Member @relation(fields: [memberId], references: [id])  
 
   conversationId String
-  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  conversation Conversation @relation(fields: [conversationId], references: [id])
 
   deleted Boolean @default(false)
   
